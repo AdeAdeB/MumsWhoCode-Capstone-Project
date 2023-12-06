@@ -14,6 +14,7 @@ Step 1- pgAdmin was lauched and the database was created
 Step 2- captown_air_bnb table was created using the query tool
 Step 3- the file is a csv file so it was imported to pgAdmin using the import data option
 Step 4- there are a lot of null values in the datset, so another table was created using the *SELECT INTO* function while keeping the original table
+Step 5- dropped unwanted column
 
 ## Results
 (fill in what you discovered the data could tell you  and how you used the data to answer those questions)
