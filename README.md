@@ -23,6 +23,7 @@ Step 4- there are a lot of null values in the datset, so another table was creat
 Importing the csv file brought a lot of failed processes because the OID option was checked
 Cleaning the null values, don't know whether to filter them out or replace them with a default value
 There are some unnecessary data in some columns
+Finding it difficult to split the unnecessary data from the column
 
 ## Future Goals
 
