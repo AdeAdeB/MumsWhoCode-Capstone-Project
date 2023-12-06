@@ -18,7 +18,8 @@
 
 ## Challenges
 
-(discuss the challenges you faced in the project)
+(Importing the csv file brought a lot of failed processes because the OID option was checked)
+(Cleaning the null values, don't know whether to filter them out or replace them with a default value)
 
 ## Future Goals
 
