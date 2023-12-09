@@ -18,42 +18,58 @@ Answer: 1) 21120 listings
 
 Question 2: How many distinct hosts are present in the CapeTown AirBnB listing? How many listings does each of this distinct hosts have? Which host have the most listings
 
-SQL Queries: SELECT COUNT(DISTINCT host_id) AS distinct_hosts_coumt
+SQL Queries: 1) Getting the total number of distinct hosts in the CapeTown AirBnB listing
+SELECT COUNT(DISTINCT host_id) AS distinct_hosts_coumt
 FROM listings
 SELECT  host_id, MAX(host_total_listings_count) AS max_listings
 FROM listings
 GROUP BY host_id, host_total_listings_count
 ORDER BY host_total_listings_count DESC
+2) To determine the total number of listings each distinct host has
+SELECT
+host_id,
+COUNT(*) AS listing_count
+FROM listings
+GROUP BY host_id;
+3) Getting the host with the most listings
+SELECT
+host_id, host_name,
+COUNT(*) AS listing_count
+FROM listings
+GROUP BY host_id, host_name
+ORDER BY listing_count DESC;
 
-Answer: 11303
-Travelnest with the id '439074505' has the highest total listings of 5355
+Answer: 1) 11303
+3) Manageair has the most listings with listing count of '155'
 
 Question 3: On Availability, What is the total number of listings available for more than 90 days a year? How many listings have availability for less than 30 days a year? What percentage of listings are available for instant booking?
 
-SQL Queries: SELECT COUNT (*) AS total_listings_more_than_90_days
+SQL Queries: 1) To get the total number of listings available for more than 90 days a year
+SELECT COUNT (*) AS total_listings_more_than_90_days
 FROM listings
 WHERE CAST (availability_365 AS INTEGER) > 90
+2) To determine the number of listings available for less than 30 days a year
 SELECT COUNT (*) AS total_listings_less_than_30_days
 FROM listings
 WHERE CAST (availability_365 AS INTEGER) <30 
-
+3) Determining the percentage of listings available for instant booking
 SELECT
 (COUNT(CASE WHEN instant_bookable = 't' THEN 1 END) * 100) / COUNT(*) AS instant_booking_percentage
 FROM listings
 
-Answer: 14998
-3842
-27%
+Answer: 1) 14998
+        2) 3842
+        3) 27%
 
 Question 4: What are the different types of properties available and their counts? Which property type has the highest average price? Write a query to show the correlation between review and pricing.
 
-SQL Queries: 1) For different types of properties available
+SQL Queries: 1) Getting the different types of properties available
 SELECT property_type,
 COUNT (*) AS property_count
 FROM listings
 GROUP BY property_type
 ORDER BY property_count DESC
-2) The property with the highest average price
+2) To get the property with the highest average price
 SELECT 
 property_type,
 AVG(CAST(REGEXP_REPLACE(listings.price, '[^\d.]', '', 'g') AS NUMERIC)) AS average_price
@@ -65,10 +81,10 @@ LIMIT 1;
 SELECT 
 CORR(number_of_reviews, CAST(REGEXP_REPLACE(listings.price, '[^\d.]', '', 'g') AS NUMERIC)) AS correlation
 FROM listings
-
+--The price is in string or character varying type instead of numeric, hence, the need for the CAST function
 Answer: 1)there are 81 property types
         2) Entire villa has the highest average price with 13742.4 as the average price
-        3) From the result of the query, it shows there is no correlation between review and pricing
+        3) From the result of the query, it shows there is no correlation between review and pricing (Negative correlation)
 
 Question 5: How do individual listings or hosts perform compared to the average or top-performing ones in terms of ratings, pricing, and booking frequency?
 
