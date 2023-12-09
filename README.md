@@ -17,7 +17,17 @@ Step 4- there are a lot of null values in the datset, so another table was creat
 Step 5- dropped unwanted column
 
 ## Results
-(fill in what you discovered the data could tell you  and how you used the data to answer those questions)
+The data could tell us a lot about the CapeTown Air BnB such as:
+1) The number of listing each host has
+2) The host with the highest number of listings
+3) The booking frequency
+4) The status of a host's activeness
+5) The overall amenities provided
+6) The general rating
+7) The price comparison
+8) The correlation between the review and the pricing
+9) The host performance in correlation with the rating
+10) The minimum and maximum nights that can be spent
 
 ## Challenges
 
@@ -28,4 +38,4 @@ Finding it difficult to split the unnecessary data from the column
 
 ## Future Goals
 
-(What would you do if you had more time?)
+If I had more time, I'd explore the data more and create new columns.
