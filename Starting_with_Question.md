@@ -12,7 +12,7 @@ COUNT(*) AS listing_count,
 (COUNT(*) * 100.0 / (SELECT COUNT(*) FROM listings)) AS percentage
 FROM listings
 GROUP BY status;
-Answer: 1) 21120 listings 
+Answer: 1) There are initially 21120 listings.
         2) Yes, there are inactive listings in the data
         3) 53.5% is active while 46.5% is inactive
 
