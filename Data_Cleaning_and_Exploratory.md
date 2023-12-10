@@ -23,14 +23,24 @@
 
 
 UPDATE listings
+
+
 SET review_scores_value = 0
 WHERE review_scores_value IS NULL
 
 
 --The syntax for dropping redundant columns is;
+
+
 ALTER TABLE listings
 DROP COLUMN amenities
-Explore the data to reveal shape, patterns and its overview 
+
+
+ #The pattern and overview of the dataset
+
+ --The dataset is structured in a way that defines the names of the different AirBnb in Capetown, their hosts' identity, the dates when they started being hosts, their locations, the number of rooms present, the review ratings, how swift the hosts are in responding, the properties type, the hosts' total listings, the prices of the rooms, the minimum and maximun nights that can be spent, the availability of the rooms in 30, 90, and 365 days respectively.
+
+ 
 Queries:
 
 ```sql
