@@ -1,5 +1,19 @@
 Fill out this file with a description of the issues that will be addressed by cleaning the data if there are any
+--Having opened the data and trying to get familiar with it, it was observed that the data is very dirty
+--Data Quality is an issue as there are lots of null and Not Applicable values
+--These values were replaced with default values because dropping them will cause a great loss to the data
+--For the integer data types, the default value was 'O'
+--For the string data types, the default value was 'Unknown'
+--For the date type, the default value was the current date
+--Some redundant columns were noticed and dropped as they are irrelevant
 Include the queries used to clean the data
+--The syntax of the query that was used for replacing these values is:
+UPDATE listings
+SET review_scores_value = 0
+WHERE review_scores_value IS NULL
+--The syntax for dropping redundant columns is;
+ALTER TABLE listings
+DROP COLUMN amenities
 Explore the data to reveal shape, patterns and its overview 
 Queries:
 
