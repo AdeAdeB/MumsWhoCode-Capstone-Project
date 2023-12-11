@@ -3,16 +3,28 @@
 ## Project/Goals
 ## Project description
 This is the capstone project after an intensive 2-months training at MumsWhoCode.
+
+
 We were taught on how to use excel, power bi, and SQL for data analysis.
 ## Goals
 1- To be able to use SQL for data exploration and cleaning as a data analyst
+
+
 2- To navigate GitHub repositories and be familiar with them
+
+
 3- To add this project to my portfolio as a case study
 ## Process
 
 Step 1- pgAdmin was lauched and the database was created
+
+
 Step 2- captown_air_bnb table was created using the query tool
+
+
 Step 3- the file is a csv file so it was imported to pgAdmin using the import data option
+
+
 Step 4- the datset was cleaned thoroughly by replacing the null values with default values and dropping redundant columns
 
 ## Results
