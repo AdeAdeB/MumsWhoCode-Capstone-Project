@@ -31,8 +31,14 @@ The data could tell us a lot about the CapeTown Air BnB such as:
 ## Challenges
 
 Importing the csv file brought a lot of failed processes because the OID option was checked
+
+
 Cleaning the null values, don't know whether to filter them out or replace them with a default value- Later replaced the null values with default values
+
+
 There are some unnecessary data in some columns
+
+
 Using the price for an aggregate function was difficult because it was in character varying type- Overcame the challenge by casting the price column
 
 ## Future Goals
