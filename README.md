@@ -7,7 +7,7 @@ We were taught on how to use excel, power bi, and SQL for data analysis.
 ## Goals
 1- To be able to use SQL for data exploration and cleaning as a data analyst
 2- To navigate GitHub repositories and be familiar with them
-3- To add this project to our portfolio as a case study
+3- To add this project to my portfolio as a case study
 ## Process
 
 Step 1- pgAdmin was lauched and the database was created
