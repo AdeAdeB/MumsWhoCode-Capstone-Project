@@ -1,4 +1,4 @@
-# MumsWhoCodeSQL_project
+# SQL_project
 
 ## Project/Goals
 ## Project description
